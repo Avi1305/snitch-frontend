@@ -15,3 +15,12 @@ export async function getSellerProducts() {
   return response.data;
 } 
 
+export async function getProducts() {
+  const response = await productApi.get("/");
+  return response.data;
+}
+
+export async function getProductById(id) {
+  const response = await productApi.get(`/details/${id}`);
+  return response.data;
+}
